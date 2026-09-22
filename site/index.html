@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistemas Operacionais — P1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+
+  <!-- Tela inicial -->
+  <section id="start-screen" class="card">
+    <h1>Sistemas Operacionais — P1</h1>
+    <p class="subtitle">Simulado de múltipla escolha com <strong id="q-count"></strong> questões.</p>
+    <label class="shuffle-option">
+      <input type="checkbox" id="shuffle-check">
+      Embaralhar ordem das questões
+    </label>
+    <button id="btn-start" class="btn primary">Começar</button>
+  </section>
+
+  <!-- Tela de questão -->
+  <section id="quiz-screen" class="card hidden">
+    <div class="quiz-header">
+      <span id="progress-label"></span>
+      <button id="btn-hint" class="hint-btn" title="Dica" aria-label="Dica">?</button>
+    </div>
+    <div class="progress-bar"><div id="progress-fill"></div></div>
+    <div id="hint-box" class="hint-box hidden"></div>
+    <div id="enunciado" class="enunciado"></div>
+    <img id="figura" class="figura hidden" alt="Figura da questão">
+    <div id="alternativas"></div>
+    <div id="feedback" class="hidden"></div>
+    <div id="resumo-box" class="resumo-box hidden"></div>
+    <div id="explicacao-box" class="explicacao-box hidden"></div>
+    <div class="actions">
+      <button id="btn-answer" class="btn primary" disabled>Responder</button>
+      <button id="btn-next" class="btn primary hidden">Próxima</button>
+    </div>
+  </section>
+
+  <!-- Tela de resultados -->
+  <section id="results-screen" class="card hidden">
+    <h1>Resultado</h1>
+    <p id="score-line" class="score"></p>
+    <ul id="review-list" class="review-list"></ul>
+    <button id="btn-restart" class="btn primary">Refazer</button>
+  </section>
+
+  <!-- Tela de revisão (read-only) -->
+  <section id="review-screen" class="card hidden">
+    <h2 id="review-title"></h2>
+    <div id="review-body"></div>
+    <button id="btn-back" class="btn">← Voltar aos resultados</button>
+  </section>
+
+</main>
+<script src="questions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
