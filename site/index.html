@@ -17,7 +17,10 @@
       <input type="checkbox" id="shuffle-check">
       Embaralhar ordem das questões
     </label>
-    <button id="btn-start" class="btn primary">Começar</button>
+    <div class="actions start-actions">
+      <button id="btn-start" class="btn primary">Começar</button>
+      <button id="btn-history-start" class="btn">Histórico</button>
+    </div>
   </section>
 
   <!-- Tela de questão -->
@@ -45,7 +48,33 @@
     <h1>Resultado</h1>
     <p id="score-line" class="score"></p>
     <ul id="review-list" class="review-list"></ul>
-    <button id="btn-restart" class="btn primary">Refazer</button>
+    <div class="actions">
+      <button id="btn-history-results" class="btn">Histórico</button>
+      <button id="btn-restart" class="btn primary">Refazer</button>
+    </div>
+  </section>
+
+  <!-- Tela de histórico -->
+  <section id="history-screen" class="card hidden">
+    <h1>Histórico</h1>
+    <p id="history-empty" class="history-empty hidden">Nenhuma tentativa registrada ainda.</p>
+    <div id="history-content" class="hidden">
+      <div id="history-summary" class="history-summary"></div>
+      <h2>Tentativas</h2>
+      <ul id="history-list" class="review-list"></ul>
+      <h2>Questões que você mais erra</h2>
+      <p id="history-worst-empty" class="history-empty hidden">Nenhum erro registrado até agora.</p>
+      <ul id="history-worst" class="review-list"></ul>
+      <button id="btn-clear-history" class="btn danger">Apagar histórico</button>
+    </div>
+    <button id="btn-history-back" class="btn">← Voltar</button>
+  </section>
+
+  <!-- Detalhe de uma tentativa -->
+  <section id="attempt-screen" class="card hidden">
+    <h2 id="attempt-title"></h2>
+    <ul id="attempt-list" class="review-list"></ul>
+    <button id="btn-attempt-back" class="btn">← Voltar ao histórico</button>
   </section>
 
   <!-- Tela de revisão (read-only) -->

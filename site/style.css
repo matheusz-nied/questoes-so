@@ -51,6 +51,34 @@ h2 { font-size: 1.2rem; margin-bottom: 12px; }
 }
 .btn.primary:hover { background: #1c6aa5; }
 .btn:disabled { opacity: .45; cursor: not-allowed; }
+.btn.danger {
+  background: #e12d39;
+  border-color: #e12d39;
+  color: #fff;
+}
+.btn.danger:hover { background: #b4232e; }
+
+.start-actions { justify-content: flex-start; }
+
+.history-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.history-summary .stat {
+  background: #f5f7fa;
+  border-radius: 8px;
+  padding: 10px 12px;
+  text-align: center;
+}
+.history-summary .stat .value { font-size: 1.15rem; font-weight: 700; color: #186fa0; }
+.history-summary .stat .label { font-size: .8rem; color: #52606d; }
+
+#history-screen h2 { margin: 18px 0 10px; }
+.history-empty { color: #52606d; margin-bottom: 16px; }
+#btn-clear-history { margin-top: 6px; }
+#btn-history-back, #btn-attempt-back { margin-top: 14px; }
 
 .quiz-header {
   display: flex;
